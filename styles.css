@@ -1,4 +1,4 @@
-/* General Reset */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,23 +13,15 @@ body {
   scroll-behavior: smooth;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* Header */
 header {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px 0;
   text-align: center;
-  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
   font-size: 2.5rem;
-  opacity: 0;
-  animation: fadeIn 2s ease-out forwards;
 }
 
 header nav ul {
@@ -45,12 +37,6 @@ header nav ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-  color: #ffcc00;
 }
 
 /* Hero Section */
@@ -59,9 +45,6 @@ header nav ul li a:hover {
   color: white;
   padding: 80px 0;
   text-align: center;
-  transform: translateY(30px);
-  opacity: 0;
-  animation: slideInUp 1.5s ease-out forwards;
 }
 
 .hero h2 {
@@ -70,157 +53,42 @@ header nav ul li a:hover {
 
 .hero p {
   font-size: 1.25rem;
-  margin-bottom: 30px;
 }
 
-.hero .btn-primary {
-  background-color: #ffcc00;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: #333;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.hero .btn-primary:hover {
-  background-color: #e6b800;
-}
-
-/* About Section */
-#about {
+/* Gravity Simulation Section */
+#simulation {
   padding: 50px 0;
   text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideInUp 1s ease-out forwards;
 }
 
-#about h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* Planets Section */
-#planets {
-  padding: 50px 0;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideInUp 1.5s ease-out forwards;
-}
-
-#planets h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.planet-list {
+.simulation-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+canvas {
+  background-color: #111;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  width: 600px;
+  height: 600px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+  color: white;
 }
 
-.planet-item {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.planet-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.planet-item p {
+.controls label {
   font-size: 1rem;
 }
 
-/* Solar System Animation */
-.solar-system-animation {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.planet {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-  border-radius: 50%;
-  opacity: 0.8;
-  transition: transform 2s ease, opacity 0.5s;
-}
-
-.earth {
-  width: 30px;
-  height: 30px;
-  background-color: #00f;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.jupiter {
-  width: 50px;
-  height: 50px;
-  background-color: #ff9800;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.saturn {
-  width: 40px;
-  height: 40px;
-  background-color: #ffcc00;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.solar-system-animation .earth {
-  animation: orbit 10s infinite linear;
-}
-
-.solar-system-animation .jupiter {
-  animation: orbit 15s infinite linear;
-}
-
-.solar-system-animation .saturn {
-  animation: orbit 20s infinite linear;
-}
-
-@keyframes orbit {
-  0% {
-    transform: rotate(0deg) translateX(150px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translateX(150px) rotate(-360deg);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Contact Section */
-#contact {
-  padding: 50px 0;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideInUp 1.5s ease-out forwards;
+.controls input {
+  width: 200px;
 }
 
 footer {
@@ -228,21 +96,4 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .planet-list {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .planet-item {
-    width: 100%;
-  }
-
-  .solar-system-animation {
-    width: 100%;
-    height: 300px;
-  }
 }
