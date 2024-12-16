@@ -1,53 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Understanding Gravity in the Solar System</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Gravity in the Solar System</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>Understanding Gravity in the Solar System</h1>
-    </header>
-
-    <!-- Navigation Bar -->
-    <nav>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1 class="animate-header">Understanding Gravity in the Solar System</h1>
+      <nav>
         <ul>
-            <li><a href="#gravity">What is Gravity?</a></li>
-            <li><a href="#gravity-video">Video</a></li>
-            <li><a href="#simulation">Interactive Simulation</a></li>
+          <li><a href="#home" class="scroll-link">Home</a></li>
+          <li><a href="#about" class="scroll-link">About Gravity</a></li>
+          <li><a href="#planets" class="scroll-link">Planets</a></li>
+          <li><a href="#solar-system" class="scroll-link">Solar System</a></li>
+          <li><a href="#contact" class="scroll-link">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Gravity Section with Animated Planet -->
-    <section id="gravity">
-        <h2>What is Gravity?</h2>
-        <p>Gravity is the invisible force that governs the motion of all objects in the solar system. It keeps planets in orbit around the Sun, and affects moons, asteroids, and other celestial objects.</p>
-        <div class="planet"></div> <!-- Planet with orbit animation -->
-    </section>
+  <!-- Home Section -->
+  <section id="home" class="hero animate-section">
+    <div class="container">
+      <h2>Gravity in Space</h2>
+      <p>Discover how gravity influences the Solar System and keeps everything in motion.</p>
+      <a href="#about" class="btn-primary">Learn More</a>
+    </div>
+  </section>
 
-    <!-- Embedded Video Section -->
-    <section id="gravity-video">
-        <h2>Watch This Video on Gravity</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/X7x0KGFemBY
+  <!-- About Gravity Section -->
+  <section id="about" class="animate-section">
+    <div class="container">
+      <h2>What is Gravity?</h2>
+      <p>Gravity is the force that pulls objects toward each other. It is what keeps the planets in orbit around the Sun and makes objects fall to the ground.</p>
+    </div>
+  </section>
 
-" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-    </section>
+  <!-- Planets Section -->
+  <section id="planets" class="animate-section">
+    <div class="container">
+      <h2>Planets in the Solar System</h2>
+      <div class="planet-list">
+        <div class="planet-item">
+          <h3>Earth</h3>
+          <p>The third planet from the Sun, home to life, and a perfect example of gravity at work.</p>
+        </div>
+        <div class="planet-item">
+          <h3>Jupiter</h3>
+          <p>The largest planet in the Solar System, with a massive gravitational pull.</p>
+        </div>
+        <div class="planet-item">
+          <h3>Saturn</h3>
+          <p>Famous for its rings, Saturn's gravity affects many moons and space objects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Interactive Gravity Simulation Section -->
-    <section id="simulation">
-        <h2>Interactive Gravity Simulation</h2>
-        <iframe src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html" width="800" height="600"></iframe>
-    </section>
+  <!-- Solar System Section -->
+  <section id="solar-system" class="animate-section">
+    <div class="container">
+      <h2>The Solar System</h2>
+      <p>The Sun’s gravity holds the entire Solar System together. All the planets, moons, and other objects orbit around it.</p>
+      <!-- You can add an interactive solar system model here -->
+      <div class="solar-system-animation">
+        <div class="planet earth"></div>
+        <div class="planet jupiter"></div>
+        <div class="planet saturn"></div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>Created with love by [Your Name].</p>
-    </footer>
+  <!-- Contact Section -->
+  <section id="contact" class="animate-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
 
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Understanding Gravity | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
