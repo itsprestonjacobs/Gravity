@@ -1,103 +1,248 @@
-/* General Styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
-    position: relative;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle, #0f1b3d, #1b264d);
+  color: white;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
 }
 
-nav {
-    background-color: #333;
-    padding: 10px;
+header h1 {
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+header nav ul {
+  list-style-type: none;
+  text-align: center;
 }
 
-nav ul li {
-    margin: 0 15px;
+header nav ul li {
+  display: inline;
+  margin: 0 20px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    background-color: #4CAF50;
+header nav ul li a:hover {
+  color: #ffcc00;
 }
 
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Hero Section */
+.hero {
+  background: url('space-background.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideInUp 1.5s ease-out forwards;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.hero h2 {
+  font-size: 2.5rem;
 }
 
-/* Planet Orbit Animation */
-@keyframes orbit {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn-primary {
+  background-color: #ffcc00;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero .btn-primary:hover {
+  background-color: #e6b800;
+}
+
+/* About Section */
+#about {
+  padding: 50px 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp 1s ease-out forwards;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Planets Section */
+#planets {
+  padding: 50px 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp 1.5s ease-out forwards;
+}
+
+#planets h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.planet-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.planet-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.planet-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.planet-item p {
+  font-size: 1rem;
+}
+
+/* Solar System Animation */
+.solar-system-animation {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .planet {
-    width: 100px;
-    height: 100px;
-    background-color: #FF5722;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: -100px; /* Rotate around this point */
-    animation: orbit 10s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: transform 2s ease, opacity 0.5s;
 }
 
-/* Video and Simulation Embed Styling */
-iframe {
-    max-width: 100%;
-    border: none;
-    border-radius: 8px;
+.earth {
+  width: 30px;
+  height: 30px;
+  background-color: #00f;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-/* Add padding to sections */
-section {
-    padding: 40px;
+.jupiter {
+  width: 50px;
+  height: 50px;
+  background-color: #ff9800;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-/* Mobile Responsive Styles */
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
+.saturn {
+  width: 40px;
+  height: 40px;
+  background-color: #ffcc00;
+  transform: translateX(-50%) translateY(-50%);
+}
 
-    section {
-        padding: 20px;
-    }
+.solar-system-animation .earth {
+  animation: orbit 10s infinite linear;
+}
+
+.solar-system-animation .jupiter {
+  animation: orbit 15s infinite linear;
+}
+
+.solar-system-animation .saturn {
+  animation: orbit 20s infinite linear;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp 1.5s ease-out forwards;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .planet-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .planet-item {
+    width: 100%;
+  }
+
+  .solar-system-animation {
+    width: 100%;
+    height: 300px;
+  }
 }
