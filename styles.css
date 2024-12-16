@@ -6,32 +6,35 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: radial-gradient(circle, #0f1b3d, #1b264d);
+  font-family: Arial, sans-serif;
+  background: #1b264d;
   color: white;
-  line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* Header */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 header {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 20px 0;
   text-align: center;
 }
 
 header h1 {
   font-size: 2.5rem;
+  color: #ffcc00;
 }
 
 header nav ul {
   list-style-type: none;
-  text-align: center;
 }
 
 header nav ul li {
   display: inline;
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 header nav ul li a {
@@ -39,61 +42,28 @@ header nav ul li a {
   text-decoration: none;
 }
 
-/* Hero Section */
-.hero {
-  background: url('space-background.jpg') no-repeat center center/cover;
-  color: white;
-  padding: 80px 0;
+#home, #about, #simulation, #misunderstandings {
+  padding: 40px 0;
   text-align: center;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.25rem;
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-/* Gravity Simulation Section */
-#simulation {
-  padding: 50px 0;
-  text-align: center;
-}
-
-.simulation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-canvas {
-  background-color: #111;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
-  width: 600px;
-  height: 600px;
-}
-
-.controls {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: white;
-}
-
-.controls label {
-  font-size: 1rem;
-}
-
-.controls input {
-  width: 200px;
+iframe {
+  border: none;
+  margin-top: 20px;
 }
 
 footer {
-  background-color: #222;
-  color: white;
-  padding: 20px;
+  background: #222;
   text-align: center;
+  padding: 20px;
 }
