@@ -9,7 +9,7 @@
 <body>
   <header>
     <div class="container">
-      <h1 class="animate-header">Understanding Gravity in the Solar System</h1>
+      <h1>Understanding Gravity in the Solar System</h1>
       <nav>
         <ul>
           <li><a href="#home" class="scroll-link">Home</a></li>
@@ -20,31 +20,48 @@
     </div>
   </header>
 
-  <section id="home" class="hero animate-section">
+  <section id="home">
     <div class="container">
       <h2>Gravity in Space</h2>
       <p>Learn how gravity shapes the Solar System!</p>
-      <a href="#about" class="btn-primary">Learn More</a>
     </div>
   </section>
 
-  <!-- Gravity Simulator Section -->
-  <section id="simulation" class="animate-section">
+  <section id="about" class="info-section">
+    <div class="container">
+      <h2>What is Gravity?</h2>
+      <p>Gravity is the invisible force that keeps everything in the solar system moving in patterns. The Sun is the biggest object in our solar system, so its gravity pulls on everything around it—like planets, moons, asteroids, and comets—keeping them in orbit.</p>
+      <p>Gravity doesn’t just pull things down like on Earth; it acts in all directions and depends on two things:</p>
+      <ul>
+        <li>The mass of the objects (bigger objects have stronger gravity).</li>
+        <li>The distance between them (closer objects feel stronger gravity).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="simulation">
     <div class="container">
       <h2>Interactive Gravity Simulator</h2>
-      <p>Adjust gravity and watch the planets move!</p>
-      <div class="simulation-container">
-        <canvas id="solarSystemCanvas"></canvas>
-        <div class="controls">
-          <label for="gravity">Gravity: </label>
-          <input type="range" id="gravity" min="0.1" max="5" step="0.1" value="1" />
-          <span id="gravityValue">1</span>
-          
-          <label for="speed">Speed: </label>
-          <input type="range" id="speed" min="0.1" max="10" step="0.1" value="1" />
-          <span id="speedValue">1</span>
-        </div>
-      </div>
+      <p>Use the PhET simulation to understand how gravity works in our Solar System. Adjust the mass and distance to see how they affect the motion of planets.</p>
+
+      <!-- Embed PhET Simulation -->
+      <iframe src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html" width="800" height="600"></iframe>
+    </div>
+  </section>
+
+  <section id="misunderstandings" class="info-section">
+    <div class="container">
+      <h2>Common Misunderstandings About Gravity</h2>
+      <ul>
+        <li>Gravity isn’t just on Earth: Gravity exists everywhere in space.</li>
+        <li>Gravity isn’t always the same strength: It depends on mass and distance.</li>
+        <li>Gravity doesn’t only pull down: It pulls in all directions.</li>
+        <li>Space isn’t gravity-free: Even astronauts in space feel gravity, though less than on Earth.</li>
+        <li>Gravity affects more than planets and stars: It also affects moons, comets, and other space objects.</li>
+        <li>The Moon has gravity: It’s weaker than Earth’s, but it’s still there.</li>
+        <li>Gravity does more than cause motion: It holds planets and moons in place too.</li>
+        <li>Gravity isn’t caused by spinning: It comes from an object’s mass.</li>
+      </ul>
     </div>
   </section>
 
@@ -53,7 +70,5 @@
       <p>&copy; 2024 Understanding Gravity | All Rights Reserved</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
